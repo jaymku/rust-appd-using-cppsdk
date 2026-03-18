@@ -7,7 +7,7 @@ This project demonstrates using the AppDynamics C++ SDK from Rust via FFI (bindg
 
 - **AppDynamics C++ SDK** under `appdynamics-cpp-sdk/` with:
   - `include/` (headers)
-  - `lib/libappdynamics.so` (Linux x86_64; glibc ≥ 2.5)
+  - `lib/libappdynamics.so` (Linux x86_64, glibc ≥ 2.5)
 - **Docker** (for building and running the demo image), or a Linux build environment with Rust, `clang`, `libclang-dev`, and a C++ toolchain.
 
 
@@ -30,7 +30,7 @@ Requires Rust toolchain, `clang`, `libclang-dev`, and `build-essential`. From th
 cargo build --release
 ```
 
-Bindings are generated at build time by `build.rs` (bindgen) into `OUT_DIR`; no separate bindgen step is needed.
+Bindings are generated at build time by `build.rs` (bindgen) into `OUT_DIR`, no separate bindgen step is needed.
 
 
 
@@ -91,9 +91,9 @@ export APPD_CONTROLLER_ACCESS_KEY=your-access-key
 ### Project layout
 
 - **`src/main.rs`** – Entry point and demo: config from env, SDK init, loop of business transactions.
-- **`src/bindings.rs`** – Includes bindgen-generated bindings from `OUT_DIR`; all `appd_*` functions and types are available there.
+- **`src/bindings.rs`** – Includes bindgen-generated bindings from `OUT_DIR`, all `appd_*` functions and types are available there.
 - **`build.rs`** – Runs bindgen on `wrapper.h` and the AppD headers, writes bindings to `OUT_DIR`, and links `libappdynamics.so`.
-- **`wrapper.h`** – Includes the AppD C API header; keep this and `appdynamics-cpp-sdk/include/appdynamics.h` as the source of truth for APIs.
+- **`wrapper.h`** – Includes the AppD C API header, keep this and `appdynamics-cpp-sdk/include/appdynamics.h` as the source of truth for APIs.
 
 ### Adding instrumentation
 
@@ -117,4 +117,4 @@ export APPD_CONTROLLER_ACCESS_KEY=your-access-key
 
 ## Bindings
 
-Bindings are generated at **build time** by `build.rs` (bindgen) into `OUT_DIR` and included from `src/bindings.rs`. Only `appd_*` functions/types and `APPD_*` constants are allowlisted. Regeneration is automatic on each build; no manual bindgen or committed binding files are required.
+Bindings are generated at **build time** by `build.rs` (bindgen) into `OUT_DIR` and included from `src/bindings.rs`. Only `appd_*` functions/types and `APPD_*` constants are allowlisted. Regeneration is automatic on each build, no manual bindgen or committed binding files are required.
