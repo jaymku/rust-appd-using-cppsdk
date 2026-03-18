@@ -1,0 +1,12 @@
+[package]
+name = "appd-rust-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Standard C types for FFI
+libc = "0.2"
+
+[build-dependencies]
+# Generates bindings at compile time
+bindgen = "0.69"
