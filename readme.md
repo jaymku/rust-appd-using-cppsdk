@@ -131,4 +131,4 @@ Bindings are generated at **build time** by `build.rs` (bindgen) into `OUT_DIR` 
 
 [AppDynamics C/C++ SDK references](https://help.splunk.com/en/appdynamics-saas/application-performance-monitoring/26.2.0/install-app-server-agents/cc-sdk/ccpp-sdk-reference/basic-types)
 
-
+[Rust bindgen FFI code - user guide](https://rust-lang.github.io/rust-bindgen/introduction.html)
