@@ -9,7 +9,7 @@ This project demonstrates using the AppDynamics C++ SDK from Rust via FFI (bindg
   - `include/` (headers)
   - `lib/libappdynamics.so` (Linux x86_64, glibc ≥ 2.5)
 
-> [!NOTE
+> [!NOTE]
 > Download the C++ SDK from [AppDynamics Downloads portal](https://accounts.appdynamics.com/downloads) 
 
 - **Docker** (for building and running the demo image), or a Linux build environment with Rust, `clang`, `libclang-dev`, and a C++ toolchain.
