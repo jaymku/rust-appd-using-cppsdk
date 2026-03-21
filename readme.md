@@ -8,8 +8,14 @@ This project demonstrates using the AppDynamics C++ SDK from Rust via FFI (bindg
 - **AppDynamics C++ SDK** under `appdynamics-cpp-sdk/` with:
   - `include/` (headers)
   - `lib/libappdynamics.so` (Linux x86_64, glibc ≥ 2.5)
+
+> [!NOTE
+> Download the C++ SDK from [AppDynamics Downloads portal](https://accounts.appdynamics.com/downloads) 
+
 - **Docker** (for building and running the demo image), or a Linux build environment with Rust, `clang`, `libclang-dev`, and a C++ toolchain.
 
+> [!IMPORTANT]  
+> Check [AppDynamics C/C++ Supported Platforms](https://help.splunk.com/en/appdynamics-saas/application-performance-monitoring/26.2.0/install-app-server-agents/cc-sdk/cc-sdk-supported-environments) for more details. 
 
 
 ## Build
@@ -118,3 +124,11 @@ export APPD_CONTROLLER_ACCESS_KEY=your-access-key
 ## Bindings
 
 Bindings are generated at **build time** by `build.rs` (bindgen) into `OUT_DIR` and included from `src/bindings.rs`. Only `appd_*` functions/types and `APPD_*` constants are allowlisted. Regeneration is automatic on each build, no manual bindgen or committed binding files are required.
+
+## Resources 
+
+[AppDynamics C/C++ Supported Platforms](https://help.splunk.com/en/appdynamics-saas/application-performance-monitoring/26.2.0/install-app-server-agents/cc-sdk/cc-sdk-supported-environments)
+
+[AppDynamics C/C++ SDK references](https://help.splunk.com/en/appdynamics-saas/application-performance-monitoring/26.2.0/install-app-server-agents/cc-sdk/ccpp-sdk-reference/basic-types)
+
+
